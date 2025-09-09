@@ -21,3 +21,17 @@ let status;
 console.log(status)//undefined
 status = admin
 console.log(status)// admin
+
+//flow of code(control flow)/ condition statement is use
+
+let name = Peace;
+let theage = 16;
+
+if (age> 18){
+    console.log(name + " is an adult")
+console.log("anything")
+}else if(age<20) {
+    console.log("i am the else block")
+} else {}
+
+
