@@ -33,3 +33,18 @@ return sum; //this makes
 
 let test = SumOfTwoss(12 ,5);
 console.log(test) //this will display undefined unless you return in the local scope
+
+
+//IIFE- immediate invoke function
+//you dont need to  call this the syntax ()(). example
+
+(function(){
+    console.log("checking")
+})()
+
+//Arrow function
+//syntax ()=>{} . Example
+
+const testFunction = ()=> {
+
+} //we assign a variable to the arrow function
