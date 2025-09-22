@@ -1,5 +1,5 @@
 //Higher order function
-const func = function(parameterOne, parameterTwo){
+/*const func = function(parameterOne, parameterTwo){
     parameterOne()
 };
 
@@ -9,7 +9,7 @@ const func2 = function() {
     }
 };
 
-func(func2, "testing");
+func(func2, "testing");*/
 
 
 /*1 `Create an HTML form that allows a user to enter a list of numbers (separated by commas).
@@ -46,3 +46,5 @@ const callback = function(event){
 }
 
 form.addEventListener("submit", callback)
+
+//  1. Convert the string input into an array of numbers.
