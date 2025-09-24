@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form style="display:flex; flex-direction:column; gap:0.5rem ">
+        <label for="userEmail">Email</label>
+        <input type="email" id="userEmail"/>
+
+        <label>
+            Name
+            <input type="text"/>
+        </label>
+
+        <label>
+            <span>password</span>
+            <input type="password"/>
+        </label>
+
+
+        <label for="male">Male</label>
+        <input name="gender" id="male" type="radio" value="Male"/>
+<!--the name attribute made it possible that we can only click on one. 
+more like there are together-->
+
+<label>Female</label>
+<input name="gender" type="radio"/>
+        <label>
+            JavaScript
+            <input type="checkbox" value="js" name="skill"/>
+        </label>
+
+        <label>
+            Pyton
+            <input type="checkbox" value="js" name="skill2"/>
+        </label>
+
+<label>
+    Ruby
+    <input type="checkbox"/>
+</label>
+    </form>
+
+    <button type="submit">Submit</button>
+</body>
+</html>
