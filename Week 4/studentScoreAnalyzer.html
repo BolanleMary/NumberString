@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Score Analyzer</title>
+</head>
+<body>
+    <!--Application Question: Student Score Analyzer
+ 
+👉 Task: Build a small web app that allows users to:
+1. Enter student names and scores.
+2. Display the list of students on the page.
+3. Use JavaScript to:
+• Show only students who passed (score ≥ 50) using filter.
+• Show all student names in uppercase using map.
+• Calculate the average score using reduce.
+• Use a loop to render the results in the DOM.
+• Organize code into functions.-->
+<form>
+    <label  for="name">Name of Student</label>
+    <input name="name" type="text" id="name" placeholder="type  in your name" autocomplete="name"/>
+
+    <label>
+        Student's Score
+        <input id="score" type="number" placeholder="type in your score" />
+    </label>
+<button onclick="addStudent()">Add Students</button>
+    
+<h3>Students list</h3>
+<ul id="studentList"></ul>
+
+<h3>Student who pass</h3>
+<ul id="passedStudent"></ul>
+
+<h3>Names in UpperCase</h3>
+<ul id="uppercase"></ul>
+<script>
+
+    const students = [];
+    
+    //Function to add student
+    function addStudent(){
+        const name = document.getElementById("name").value;
+        const score = parseInt(document.getElementById("score").value);
+   
+    if (name && !isNaN(score)){
+        students.push({ name, score});
+           document.getElementById("name").value = "";
+           document.getElementById(score).value = "";
+            renderResult();
+         }else{
+            alert("input valid name and score");
+         }
+ }
+         function renderResult() {
+        displayAllStudents();
+        displayAllStudents(); 
+        displayNameInUppercase();
+        displayAverageScore();
+
+    }
+
+//Function to display all student
+        function displayAllStudents() {
+            const list = document.getElementById("studentList");
+            list.innerHTML = "";
+            students.forEach( student =>{
+                const li = document.createElement("li")
+             li.textContent = `${student.name} - ${student.score}`
+             list.appendChild(li);
+});
+        }
+
+        //Function to get student who pass
+        function displayPassedStudents() {
+            const passed = students.filter(student => student.score >= 50)
+            const list = document.getElementById("passedStudent");
+            list.innerHTML ="";
+            students.forEach( student => {
+               const li = document.createElement("li")
+               li.textContent = `${student.name} -${student.score}`
+               list.appendChild(li); 
+            })
+
+                    }
+                    // To turn to name to uppercase
+       function displayNameInUppercase() {
+        const upperCase =students.map(student => student.upperCase);
+        const list = document.getElementById("uppercase")
+        list.innerHTML ="";
+        students.forEach( student => {
+            const li = document.createElement("li")
+            li.textContent =`${student.name} -${student.score}`
+            list.appendChild(li)
+        })
+             }
+
+             function displayAverageScore() {
+            if (student.length === 0 ){
+                document.getElementById("uppercase").textContent=0
+                return;
+            }
+                const total = students.reduce((sum, student) => sum + student.score, 0);
+                const average = (total /student.length).toFixed(2);
+                document.getElementById("averageScore").textContent =average
+             }
+
+</script>
+    
+</form>
+</body>
+</html
