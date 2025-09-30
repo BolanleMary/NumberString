@@ -32,8 +32,8 @@ When the form is submitted:
   `;*/
 
   //Assignment one
-const form = document.getElementById('formone')
-const input =document.getElementById('inputone')
+const form = document.getElementById('formOne')
+const input =document.getElementById('inputOne')
 
 const callback = function(event){
     event.preventDefault();
@@ -45,6 +45,6 @@ const callback = function(event){
     
 }
 
-form.addEventListener("submit", callback)
+form.addEventListener("submit", callback);
 
 //  1. Convert the string input into an array of numbers.
