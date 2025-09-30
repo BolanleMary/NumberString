@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Css Class</title>
     <style>
-        *{
+       /* *{
             color: pink;
-        }
+        } */
 
         div{
             color: green;
@@ -48,6 +48,30 @@ margin: 1px 3px;
     .trial , .details, aside, #easy{
 color: pink;
     }
+
+    /*Css Combinators*/
+    #combinator{
+        border: 3px dotted ;
+    }
+    #combinator p{
+         border: 2px solid red;
+        color: green;
+       
+    }
+
+    #combinator > p{
+        color: blue;
+    }
+
+    #combinator ~ p{
+ font-size: larger;
+ color: gold;
+    }
+
+    #combinator + p{
+        padding: 7px;
+        margin: 15px;
+    }
     </style>
 </head>
 <body>
@@ -65,7 +89,21 @@ color: pink;
         <a href="www.facebook">facebook</a>
     </div>
 
+<!--To explain Css Combination-->
+    <div id="combinator">
+        <p>First paragraph</p>    <!--this is a child written with >. it is also a descendent -->
+        <p>Second paragraph</p>    <!--this is a child written with >. it is also a descendent -->
+        <div>
+            <p>Third Paragraph</p> <!--This is a descendent written with a space-->
+        </div>
+    </div>
 
+    <div>
+        <p>another paragraph</p> <!--this is adjacent sibling i.e have a parent over it written +  -->
+    </div>
+
+    <p>fourth paragraph</p> <!--this is general sibling written with ~ -->
+    <p>Fifth paragraph</p>   <!--this is general sibling written with ~ -->
 
     <!--3 ways of styling in css
 1. Inline..styling an element directly
