@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Combinator Classwork</title>
+</head>
+<style>
+.card > ul > li{
+    margin-top: 50px;
+    border: 1px solid red;
+}
+
+.card p{
+    font-size: larger;
+    color: blueviolet;
+    border: 1px solid green;
+}
+h3 + p{
+    background-color: chocolate;
+}
+
+/* Check this later*/
+#toggle ~ .options input{
+    border: 3px solid pink ;
+}
+
+.container > h2 {
+ color: aqua;   
+}
+</style>
+<body>
+    <!--
+    Goals — write one selector per goal, using the indicated combinator(s)
+ 
+ 
+1.Child combinator (>) — Style only the top-level <li> elements that are direct children of the first-level <ul> inside .card (i.e., do not style the nested <li> inside the nested <ul>).
+2.Descendant combinator (space) — Select and style every <p> that is somewhere inside .card.
+3.Adjacent sibling combinator (+) — Style the <p> that appears immediately after any <h3>.
+4.General sibling combinator (~) — When the checkbox #toggle exists, style any input fields that come after it (in the same container), but not the label before it.
+5.Combined selectors — Style only the <h2> elements that are direct children of .container (i.e., not any <h2> inside nested elements), and also make sure the selector will not match an <h2> that is nested in another element.
+    -->
+    <div class="container">
+  <h2>Section A</h2>
+  <p>Intro paragraph.</p>
+
+  <div class="card">
+    <h3>Card title</h3>
+    <p>Card description.</p>
+    <ul id="underlist">
+      <li>First</li>
+      <li>Second
+        <ul>
+          <li>Nested A</li>
+        </ul>
+      </li>
+      <li>Third</li>
+    </ul>
+  </div>
+
+  <h2>Section B</h2>
+  <p>Another intro.</p>
+
+  <h3>Subheading</h3>
+  <p>Paragraph right after subheading</p>
+  <p>Another paragraph</p>
+
+  <input type="checkbox" id="toggle">
+  <label for="toggle">Toggle</label>
+  <div class="options">
+    <input type="text">
+    <button>Apply</button>
+  </div>
+</div>
+</body>
+</html>
