@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .submitButton{
+            background-color: brown;
+            color: white;
+            border: none;
+            padding-inline-start: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /*this pseudo class. the state
+        type of pseudo class; hover,focus, active, 
+        visited, link,  */
+        .submitButton:hover{
+            background-color: blue;
+            color: gold;
+        }
+
+        button:focus{
+            background-color: pink;
+            color: white;
+        }
+        /*pseudo class; first-child*/
+        .list:first-child{
+            background-color: teal;
+        }
+        ul:first-child{
+          background-color: yellowgreen;
+        }
+        p:nth-child(2){
+          background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!--it is an imitator, not the real thing
+    with it you can style at different state
+    -->
+
+    <div class="container">
+  <h2>Section A</h2>
+  <p>Intro paragraph.</p>
+
+  <div class="card">
+    <h3>Card title</h3>
+    <p>Card description.</p>
+    <ul >
+      <li class="list">First</li>
+      <li>Second
+        <ul>
+          <li>Nested A</li>
+        </ul>
+      </li>
+      <li>Third</li>
+    </ul>
+  </div>
+
+  <h2>Section B</h2>
+  <p>Another intro.</p>
+
+  <h3>Subheading</h3>
+  <p>Paragraph right after subheading</p>
+  <p>Another paragraph</p>
+
+  <input type="checkbox" id="toggle">
+  <label for="toggle">Toggle</label>
+  <div class="options">
+    <input type="text">
+    <button class="submitButton">Apply</button>
+  </div>
+</div>
+</body>
+</html>
