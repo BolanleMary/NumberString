@@ -1,0 +1,39 @@
+.newClass::first-letter {
+  color: rgb(225, 0, 119);
+}
+
+.newClass::first-line {
+  background-color: aquamarine;
+}
+
+/* ::after and ::before are common */
+.newClass::after {
+  content: " Innocent>>>>>>";
+}
+
+.newClass {
+  position: relative;
+  padding-left: 10px;
+}
+.newClass::before {
+  content: "";
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+}
+
+p::selection {
+    background-color: gold;
+    color: purple;
+}
+*::selection{
+    background-color: black;
+    color: white;
+}
+div::backdrop{
+    background-color: cadetblue;
+    backdrop-filter: blur(10px);
+}
